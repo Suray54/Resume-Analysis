@@ -1,0 +1,6 @@
+{
+  "name": "ResumeAnalyzer",
+  "description": "Serverless AI-powered Resume Analyzer that provides detailed feedback and ATS scores using Puter.js and Claude 3.5 Sonnet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

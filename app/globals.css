@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    
+    body {
+      background-color: white !important;
+      color: black !important;
+    }
+
+    main {
+      overflow: visible !important;
+      display: block !important;
+    }
+
+    section {
+      overflow: visible !important;
+      border: none !important;
+      padding: 0 !important;
+    }
+
+    /* Hide UI noise */
+    header, nav, button, .pointer-events-none, .fixed {
+      display: none !important;
+    }
+
+    /* Avoid page breaks in middle of cards */
+    .group, .rounded-3xl {
+      break-inside: avoid;
+    }
+  }
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+}

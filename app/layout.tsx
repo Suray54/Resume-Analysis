@@ -1,36 +1,40 @@
-import type {Metadata} from 'next';
-import { Inter, Space_Grotesk } from 'next/font/google';
-import Script from 'next/script';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
+import "./globals.css";
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-display',
+  subsets: ["latin"],
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
-  title: 'ResumeAnalyzer | AI Resume Audit',
-  description: 'AI-powered ATS Resume feedback and analysis.',
+  title: "ResumeAnalyzer | AI Resume Audit",
+  description: "AI-powered ATS Resume feedback and analysis.",
   icons: {
-    icon: '/favicon.svg',
+    icon: "/favicon.svg",
   },
 };
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
-        <Script 
-          src="https://js.puter.com/v2/" 
-          strategy="beforeInteractive"
-        />
+        <Script src="https://js.puter.com/v2/" strategy="beforeInteractive" />
       </head>
-      <body suppressHydrationWarning className="bg-neutral-50 text-neutral-900 antialiased">
+      <body
+        suppressHydrationWarning
+        className="bg-neutral-50 text-neutral-900 antialiased"
+      >
         {children}
       </body>
     </html>

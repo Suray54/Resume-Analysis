@@ -139,7 +139,7 @@ const UploadPage = () => {
           "AI service returned an invalid response. Please try again.",
         );
       }
-      
+
       let content = response.message.content;
       console.log("Raw AI Response:", content);
 

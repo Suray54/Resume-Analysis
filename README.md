@@ -1,21 +1,45 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Resume Analyzer
 
-# Run and deploy your AI Studio app
+An AI-powered web application that analyzes resumes against job descriptions using Google Gemini AI, providing detailed feedback, ATS scores, and improvement suggestions.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/bac03d08-a035-4e98-9509-33218179988a
+- Upload PDF resumes and get instant AI analysis
+- Compare resumes against specific job titles and descriptions
+- Receive comprehensive feedback on content, structure, skills, and tone
+- Get ATS compatibility scores
+- Keyword matching analysis
+- Secure authentication via Puter.js
 
-## Run Locally
+## Getting Started
 
-**Prerequisites:**  Node.js
+### Prerequisites
 
+- Node.js (v20 or higher)
+- A Google Gemini API key
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-# Resume-Analysis
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env.local` file with your API key:
+   ```
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Google Gemini AI
+- Puter.js (storage & auth)
+- PDF.js (PDF processing)
